@@ -29,7 +29,7 @@ body {
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-      "Segoe UI", sans-serif;
+    "Segoe UI", sans-serif;
   background: radial-gradient(circle at top left, #f8fafc, #e5edff 60%, #e5e7eb);
   color: var(--text-main);
 }
@@ -100,7 +100,7 @@ header {
   cursor: pointer;
   box-shadow: 0 8px 18px rgba(248, 151, 72, 0.45);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast),
-      background var(--transition-fast);
+    background var(--transition-fast);
 }
 
 .schedule-btn:hover {
@@ -118,39 +118,31 @@ header {
 }
 
 /* subtle glow behind hero */
-.hero-glow {
-  position: absolute;
-  inset: 0;
-  margin: auto;
 
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.86), transparent 70%);
-  filter: blur(28px);
-  z-index: 0;
-  opacity: 0.9;
-  pointer-events: none;
-  transform: translateY(40px);
-}
 
 /* ---------- HERO CARD ---------- */
 .hero-card {
-  position: relative;
-  /* background: rgba(255, 255, 255, 0.95); */
-  border-radius: var(--radius-xl);
-  padding: 40px 42px;
+  /* position: relative; */
+  background: #ffffff;
   display: flex;
   gap: 40px;
   height: 100vh;
   width: 100vw;
-  border: 2px dotted red;
-  align-items: center;
-  /* box-shadow: var(--shadow-soft); */
-  z-index: 1;
-  backdrop-filter: blur(12px);
-  /* border: 1px solid rgba(148, 163, 184, 0.12); */
+  /* align-items: center;
+  justify-content: flex-start; */
+  border: 2px solid red;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .hero-left {
-  flex: 1.1;
+  flex: 0.8;
+  border: 2px solid red;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .rating-pill {
@@ -238,21 +230,23 @@ header {
 }
 
 .hero-right {
-  flex: 1;
+  flex: 1.2;
   display: flex;
   justify-content: center;
+  border: 1px solid red;
+  height: 100%;
 }
 
 .hero-image-frame {
-  border-radius: 26px;
-  overflow: hidden;
-  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.6);
-  background: #d7dde7;
-  width: 100%;
-  max-width: 420px;
-  aspect-ratio: 4 / 3;
   position: relative;
-  isolation: isolate;
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+  /* correct sizing */
+  width: auto;
+  max-width: auto;
+  /* margin: 0 auto 40px; */
+  height: 100%;
 }
 
 .hero-image-frame::after {
@@ -474,7 +468,7 @@ textarea {
   font-family: inherit;
   background: #f9fafb;
   transition: border-color 150ms ease-out, box-shadow 150ms ease-out,
-      background 150ms ease-out;
+    background 150ms ease-out;
 }
 
 input:focus,
@@ -510,7 +504,7 @@ textarea {
   cursor: pointer;
   box-shadow: 0 10px 24px rgba(249, 115, 22, 0.5);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast),
-      background var(--transition-fast);
+    background var(--transition-fast);
 }
 
 .submit-btn:hover {
@@ -569,59 +563,59 @@ textarea {
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 960px) {
   .hero-card {
-      flex-direction: column;
-      padding: 28px 24px 32px;
+    flex-direction: column;
+    padding: 28px 24px 32px;
   }
 
   .services-strip {
-      grid-template-columns: repeat(2, 1fr);
-      row-gap: 10px;
-      border-radius: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    border-radius: 16px;
   }
 
   .reviews-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .form-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .footer-strip {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 600px) {
   header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 12px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 18px;
   }
 
   .header-right {
-      width: 100%;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .page-wrap {
-      margin-top: 24px;
+    margin-top: 24px;
   }
 
   .hero-card {
-      padding: 24px 18px 28px;
+    padding: 24px 18px 28px;
   }
 
   .hero-title {
-      font-size: 28px;
+    font-size: 28px;
   }
 
   .reviews-section,
   .request-section,
   .footer-strip {
-      padding-inline: 20px;
+    padding-inline: 20px;
   }
 }
