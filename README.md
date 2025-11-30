@@ -1,4 +1,4 @@
-# ss-plumbing-nyc
+# SS plumbing nyc
 
 Website for SS Plumbing NYC
 
