@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SS Plumbing & Heating</title>
-<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -15,7 +17,7 @@
       <div class="header-logo">
         <img src="logo.svg" alt="SS Plumbing & Heating" class="header-logo-svg">
       </div>
-    
+
       <span>SS PLUMBING &amp; HEATING</span>
     </div>
 
@@ -27,58 +29,60 @@
   </header>
 
 
- <section class="hero-card">
-      <div class="hero-left">
-        <div class="rating-pill">
-          <span class="rating-dot"></span>
-          <span>Rated 4.8 on Google</span>
-          <span>★★★★★</span>
-        </div>
-
-        <h1 class="hero-title">
-          EXPERTS IN PLUMBING,<br />
-          HEATING &amp; WATER REPAIRS
-        </h1>
-
-        <p class="hero-subtext">
-          Fast, reliable plumbing &amp; heating service across Brooklyn and NYC.
-          Same-day appointments with certified technicians.
-        </p>
-
-        <ul class="hero-list">
-          <li>Free Estimates &amp; Transparent Pricing</li>
-          <li>Emergency, Same-Day Appointments</li>
-          <li>Professional, Certified Technicians</li>
-        </ul>
-
-        <div class="hero-actions">
-          <button class="call-btn">
-            <span class="icon">📞</span>
-            Call Now
-          </button>
-          <span class="emergency-text">24/7 emergency service available</span>
-        </div>
+  <section class="hero-card">
+    <div class="hero-left">
+      <div class="rating-pill">
+        <span class="rating-dot"></span>
+        <span>Rated 4.8 on Google</span>
+        <span>★★★★★</span>
       </div>
 
-      <div class="hero-right">
-        <div class="hero-image-frame">
-          <!-- your hero image -->
-          <img src="hero2.png" alt="Plumber speaking with customer" />
-        </div>
+      <h1 class="hero-title">
+        EXPERTS IN PLUMBING,<br />
+        HEATING &amp; WATER REPAIRS
+      </h1>
+
+      <p class="hero-subtext">
+        
+      </p>
+
+      <ul class="hero-list">
+        <li>10+ years of plumbing experience</li>
+        <li>Fast, accurate troubleshooting</li>
+        <li>Clean, professional workmanship</li>
+        <li>Honest solutions and clear recommendations</li>
+        <li>Customer satisfaction is our top priority</li>
+      </ul>
+
+      <div class="hero-actions">
+        <button class="call-btn">
+          <span class="icon">📞</span>
+          Call Now
+        </button>
+        <span class="emergency-text">24/7 emergency service available</span>
       </div>
-    </section>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-image-frame">
+        <!-- your hero image -->
+        <img src="hero3.png" alt="man standing" />
+      </div>
+    </div>
+  </section>
   <main class="page-wrap">
-    
+
 
     <!-- HERO CARD -->
-   
+
 
 
     <!-- DARK SERVICES STRIP -->
     <section class="services-strip">
       <div class="services-strip-item">
-        <span class="services-strip-icon">🔧</span>
-        <div>Pipe Repairs</div>
+          <span class="services-strip-icon">🔧</span>
+          <div>Pipe Repairs</div>
+        
       </div>
       <div class="services-strip-item">
         <span class="services-strip-icon">💧</span>
@@ -97,7 +101,13 @@
         <div>Heating Systems</div>
       </div>
     </section>
-
+    <!-- REVIEWS -->
+    <section class="about-section">
+      <h2 class="about-title">ABOUT</h2>
+      <div class="about-text">
+ <p>At SS Plumbing, our priority is delivering reliable, high-quality service with honesty and professionalism. Our technicians bring over a decade of experience and are trained to work clean, diagnose issues efficiently, and provide straightforward recommendations.</p>
+      </div>
+    </section>
     <!-- REVIEWS -->
     <section class="reviews-section">
       <h2 class="reviews-title">OUR CUSTOMER REVIEWS</h2>
@@ -136,80 +146,48 @@
       </div>
 
       <div class="reviews-footer">
-        <a
-          href="https://www.thumbtack.com/ny/brooklyn/repiping-specialists/ss-plumbing-heating/service/491606765315850246"
-          target="_blank"
-        >
+        <a href="https://www.thumbtack.com/ny/brooklyn/repiping-specialists/ss-plumbing-heating/service/491606765315850246"
+          target="_blank">
           <button class="view-reviews-btn">View All Reviews</button>
         </a>
       </div>
     </section>
 
-    <!-- REQUEST SERVICE FORM -->
-    <section class="request-section">
-      <h2 class="request-title">REQUEST SERVICE</h2>
-      <p class="request-subtitle">
-        Tell us what’s going on and a technician from SS Plumbing &amp; Heating will contact you.
-      </p>
+    <!-- Wizard Section -->
+    <div class="wizard-container">
 
-      <form>
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="full-name">Full Name</label>
-            <input id="full-name" type="text" placeholder="John Doe" />
-          </div>
+      <h2 class="wizard-title">What Problem Are You Having?</h2>
 
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input id="phone" type="text" placeholder="(718) 555-1234" />
-          </div>
+      <!-- STEP 1 -->
+      <div class="wizard-step active" id="step-1">
+        <button class="wizard-option" data-problem="drain">🚰 Drain / Clog Issues</button>
+        <button class="wizard-option" data-problem="leak">💧 Pipe Leak</button>
+        <button class="wizard-option" data-problem="heater">🔥 No Heat / Boiler Issue</button>
+        <button class="wizard-option" data-problem="install">🔧 Installations</button>
+      </div>
 
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input id="email" type="email" placeholder="email@example.com" />
-          </div>
+      <!-- STEP 2 -->
+      <div class="wizard-step" id="step-2">
+        <h3 class="wizard-subtitle"></h3>
+        <button class="wizard-option followup" data-detail="small">Small Issue</button>
+        <button class="wizard-option followup" data-detail="medium">Medium Issue</button>
+        <button class="wizard-option followup" data-detail="major">Major Issue</button>
+      </div>
 
-          <div class="form-group">
-            <label for="address">Service Address</label>
-            <input id="address" type="text" placeholder="Brooklyn, NY" />
-          </div>
+      <!-- STEP 3: RESULT -->
+      <div class="wizard-step" id="step-3">
+        <h3 class="wizard-result-title">Your Recommended Service</h3>
+        <p class="wizard-result-text"></p>
 
-          <div class="form-group">
-            <label for="problem">Type of Problem</label>
-            <select id="problem">
-              <option>Select an issue</option>
-              <option>Leak or burst pipe</option>
-              <option>Clogged drain</option>
-              <option>No heat / boiler issue</option>
-              <option>Water heater problem</option>
-              <option>Other</option>
-            </select>
-          </div>
+        <button class="wizard-call-btn">📞 Call Now</button>
+        <button class="wizard-restart">Start Over</button>
+      </div>
 
-          <div class="form-group">
-            <label for="date">Preferred Date</label>
-            <input id="date" type="date" />
-          </div>
+    </div>
 
-          <div class="form-group full-width">
-            <label for="photos">Upload Photos (optional)</label>
-            <input id="photos" type="file" />
-          </div>
-
-          <div class="form-group full-width">
-            <label for="description">Describe Your Problem</label>
-            <textarea id="description" placeholder="Tell us what's happening..."></textarea>
-          </div>
-        </div>
-
-        <div class="submit-wrap">
-          <button type="submit" class="submit-btn">Submit Request</button>
-        </div>
-      </form>
-    </section>
 
     <!-- FOOTER STRIP -->
-    <section class="footer-strip">
+    <!-- <section class="footer-strip">
       <div class="footer-col">
         <h3>MEMBERSHIPS &amp; AFFILIATIONS</h3>
         <div class="footer-badges">
@@ -235,7 +213,9 @@
           <li>NYC &amp; Brooklyn service area</li>
         </ul>
       </div>
-    </section>
+    </section> -->
   </main>
+  <script src="script.js"></script>
 </body>
+
 </html>
