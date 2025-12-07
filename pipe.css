@@ -1,0 +1,278 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #eef2f9;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: #002348;
+  color: #fff;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-btn {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.layout {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+/* GALLERY */
+.gallery-container {
+  flex: 2;
+  background: black;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 620px;
+  overflow: hidden;
+}
+
+.gallery-img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* NAV BUTTONS */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: none;
+  font-size: 42px;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.left-btn { left: 20px; }
+.right-btn { right: 20px; }
+
+.nav-btn:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+/* BEFORE/AFTER SLIDER */
+.slider-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.slider-wrapper.hidden {
+  display: none;
+}
+
+.before-img,
+.after-img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: contain;
+}
+
+.after-img {
+  clip-path: inset(0 50% 0 0);
+}
+
+/* HANDLE */
+.slider-handle {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: #ff8c32;
+  cursor: ew-resize;
+  transform: translateX(-50%);
+  border-radius: 3px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+/* RIGHT PANEL */
+.info-card {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.call-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  background: #ff8c32;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+/* LABEL TAGS ----------------------------- */
+.image-tag {
+  position: absolute;
+  top: 20px;
+  padding: 6px 14px;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 4;
+}
+
+.before-tag {
+  left: 20px;
+}
+
+.after-tag {
+  right: 20px;
+}
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #eef2f9;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: #002348;
+  color: white;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-btn { color: white; text-decoration: none; }
+
+/* LAYOUT */
+.layout {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+/* GALLERY */
+.gallery-container {
+  flex: 2;
+  background: #000;
+  border-radius: 16px;
+  height: 620px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gallery-img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* TAGS */
+.image-tag {
+  position: absolute;
+  top: 20px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+.before-tag { left: 20px; }
+.after-tag { right: 20px; }
+
+/* SLIDER */
+.slider-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.slider-img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.before-side {
+  left: 0;
+  width: 50%;
+  object-fit: cover;
+}
+
+.after-side {
+  right: 0;
+  width: 50%;
+  object-fit: cover;
+}
+
+.hidden { display: none; }
+
+/* Slider handle */
+.slider-handle {
+  width: 6px;
+  height: 100%;
+  background: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: ew-resize;
+  z-index: 11;
+}
+
+/* Buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 40px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.left-btn { left: 20px; }
+.right-btn { right: 20px; }
