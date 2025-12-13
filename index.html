@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SS Plumbing & Heating</title>
+  <title>SS Pipe Repairs NYC</title>
   <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -18,13 +18,24 @@
         <img src="logo.svg" alt="SS Plumbing & Heating" class="header-logo-svg">
       </div>
 
-      <span>SS PLUMBING &amp; HEATING</span>
+      <span>SS PIPE REPAIRS NYC</span>
     </div>
 
     <div class="header-right">
+      <div class="header-social">
+        <span>
+          <a target="_blank" href="https://www.instagram.com/ssplumbingnyc/"><img
+              style="filter: invert(1) brightness(2);"
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"></a></span>
+      </div>
+
       <span>Brooklyn, NY</span>
       <span>(XXX) XXX-XXXX</span>
-      <button class="schedule-btn">Schedule Service</button>
+      <a href="https://www.thumbtack.com/ny/brooklyn/repiping-specialists/ss-plumbing-heating/service/491606765315850246"
+        class="schedule-btn" target="_blank">
+        Schedule Service
+      </a>
+
     </div>
   </header>
 
@@ -38,12 +49,11 @@
       </div>
 
       <h1 class="hero-title">
-        EXPERTS IN PLUMBING,<br />
-        HEATING &amp; WATER REPAIRS
+        Repair Specialists,<br>We Keep NYC Flowing
       </h1>
 
       <p class="hero-subtext">
-        
+
       </p>
 
       <ul class="hero-list">
@@ -79,33 +89,41 @@
 
     <!-- DARK SERVICES STRIP -->
     <section class="services-strip">
-      <div class="services-strip-item">
-          <span class="services-strip-icon">🔧</span>
-          <div>Pipe Repairs</div>
-        
-      </div>
-      <div class="services-strip-item">
+
+      <a class="services-strip-item" href="pipe.html">
+        <span class="services-strip-icon">🔧</span>
+        <div>Pipe Repairs</div>
+      </a>
+
+      <a class="services-strip-item" href="drains.html">
         <span class="services-strip-icon">💧</span>
-        <div>Leaks &amp; Drains</div>
-      </div>
-      <div class="services-strip-item">
+        <div>Leaks & Drains</div>
+      </a>
+
+      <a class="services-strip-item" href="waterheaters.html">
         <span class="services-strip-icon">🔥</span>
-        <div>Water Heaters</div>
-      </div>
-      <div class="services-strip-item">
+        <div>Water & Heaters</div>
+      </a>
+
+      <a class="services-strip-item" href="boiler.html">
         <span class="services-strip-icon">♨️</span>
         <div>Boiler Service</div>
-      </div>
-      <div class="services-strip-item">
+      </a>
+
+      <a class="services-strip-item" href="heating.html">
         <span class="services-strip-icon">🏠</span>
         <div>Heating Systems</div>
-      </div>
+      </a>
+
     </section>
+
     <!-- REVIEWS -->
     <section class="about-section">
       <h2 class="about-title">ABOUT</h2>
       <div class="about-text">
- <p>At SS Plumbing, our priority is delivering reliable, high-quality service with honesty and professionalism. Our technicians bring over a decade of experience and are trained to work clean, diagnose issues efficiently, and provide straightforward recommendations.</p>
+        <p>At SS Plumbing, our priority is delivering reliable, high-quality service with honesty and professionalism.
+          Our technicians bring over a decade of experience and are trained to work clean, diagnose issues efficiently,
+          and provide straightforward recommendations.</p>
       </div>
     </section>
     <!-- REVIEWS -->
@@ -164,6 +182,8 @@
         <button class="wizard-option" data-problem="leak">💧 Pipe Leak</button>
         <button class="wizard-option" data-problem="heater">🔥 No Heat / Boiler Issue</button>
         <button class="wizard-option" data-problem="install">🔧 Installations</button>
+        <button class="wizard-option" data-problem="cleaning">🧽 Drain Cleaning </button>
+        <button class="wizard-option" data-problem="camera">📷 Camera Inspection </button>
       </div>
 
       <!-- STEP 2 -->
@@ -177,43 +197,36 @@
       <!-- STEP 3: RESULT -->
       <div class="wizard-step" id="step-3">
         <h3 class="wizard-result-title">Your Recommended Service</h3>
-        <p class="wizard-result-text"></p>
+        <div class="cost-breakdown">
+          <h4>Estimated Cost Breakdown</h4>
 
-        <button class="wizard-call-btn">📞 Call Now</button>
+          <div class="cost-row">
+            <span>Labor:</span>
+            <span class="cost-labor">$0</span>
+          </div>
+
+          <div class="cost-row">
+            <span>Materials:</span>
+            <span class="cost-materials">$0</span>
+          </div>
+
+          <div class="cost-row">
+            <span>Service Fee:</span>
+            <span class="cost-fee">$0</span>
+          </div>
+
+          <div class="cost-total-row">
+            <span>Total Estimate:</span>
+            <span class="cost-total">$0</span>
+          </div>
+        </div>
+        <p class="wizard-result-text"></p>
+        <a href="tel:1234567890" class="wizard-call-btn">📞 Call Now</a>
+
         <button class="wizard-restart">Start Over</button>
       </div>
 
     </div>
-
-
-    <!-- FOOTER STRIP -->
-    <!-- <section class="footer-strip">
-      <div class="footer-col">
-        <h3>MEMBERSHIPS &amp; AFFILIATIONS</h3>
-        <div class="footer-badges">
-          <div class="footer-badge"></div>
-          <div class="footer-badge"></div>
-          <div class="footer-badge"></div>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h3>PROUD MEMBER OF</h3>
-        <ul>
-          <li>Association of Water &amp; Sewer</li>
-          <li>Institute of Real Estate Management</li>
-          <li>PHCC (optional)</li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3>LICENSES</h3>
-        <ul>
-          <li>Licensed &amp; insured plumbing &amp; heating contractor</li>
-          <li>NYC &amp; Brooklyn service area</li>
-        </ul>
-      </div>
-    </section> -->
   </main>
   <script src="script.js"></script>
 </body>

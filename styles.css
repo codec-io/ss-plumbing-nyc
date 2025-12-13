@@ -25,13 +25,14 @@ html,
 body {
   margin: 0;
   padding: 0;
+   
 }
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top left, #f8fafc, #e5edff 60%, #e5e7eb);
   color: var(--text-main);
+    background: var(--page-bg);
 }
 
 h1,
@@ -89,6 +90,7 @@ header {
   font-size: 14px;
   opacity: 0.95;
 }
+
 
 .schedule-btn {
   background: var(--accent-orange);
@@ -232,18 +234,11 @@ header {
   align-items: stretch;
 }
 
-/* .hero-image-frame {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-} */
-
 .hero-image-frame::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(15, 23, 42, 0.12) 0%, transparent 50%);
+  /* background: linear-gradient(to top, rgba(15, 23, 42, 0.12) 0%, transparent 50%); */
   mix-blend-mode: multiply;
   pointer-events: none;
 }
@@ -251,7 +246,8 @@ header {
 
 .hero-image-frame {
   width: 100%;
-  height: 100%; /* adjust to taste */
+  height: 100%;
+  /* adjust to taste */
   overflow: hidden;
 }
 
@@ -265,7 +261,7 @@ header {
   transform: scale(1.02);
 }
 
-/* ---------- DARK SERVICES STRIP ---------- */
+/* ---------- DARK SERVICES STRIP (FIXED) ---------- */
 .services-strip {
   margin-top: 32px;
   background: var(--dark-strip);
@@ -274,22 +270,24 @@ header {
   padding: 16px 32px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 0;
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.55);
   border: 1px solid rgba(148, 163, 184, 0.26);
 }
 
+/* Make the whole card clickable */
 .services-strip-item {
-  text-align: center;
-  font-size: 14px;
-  border-left: 1px solid rgba(148, 163, 184, 0.35);
-  padding: 8px 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 2px;
-  transition: background var(--transition-fast), transform var(--transition-fast);
-  cursor: default;
+
+  padding: 12px 10px;
+  border-left: 1px solid rgba(148, 163, 184, 0.35);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .services-strip-item:first-child {
@@ -297,18 +295,25 @@ header {
 }
 
 .services-strip-item:hover {
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(255,255,255,0.05);
   transform: translateY(-2px);
 }
 
 .services-strip-icon {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 4px;
-  display: block;
-
-  opacity: 0.9;
 }
 
+
+/* ---------- REVIEWS SECTION=== ---------- */
+.reviews-section {
+  margin-top: 40px;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 40px 40px 32px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
 /* ---------- ABOUT SECTION=== ---------- */
 .about-section {
   margin-top: 40px;
@@ -337,16 +342,6 @@ header {
   font-weight: 800;
   margin-bottom: 26px;
 }
-/* ---------- REVIEWS SECTION=== ---------- */
-.reviews-section {
-  margin-top: 40px;
-  background: var(--card-bg);
-  border-radius: var(--radius-lg);
-  padding: 40px 40px 32px;
-  box-shadow: var(--shadow-card);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-}
-
 
 
 
@@ -524,6 +519,35 @@ header {
   cursor: pointer;
   font-size: 14px;
 }
+.cost-breakdown {
+  margin-top: 18px;
+  padding: 18px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.cost-breakdown h4 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.cost-row, .cost-total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.cost-total-row {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #d1d5db;
+  font-weight: 700;
+  font-size: 17px;
+}
 
 /* ---------- FOOTER STRIP ---------- */
 .footer-strip {
@@ -570,6 +594,62 @@ header {
 .footer-col li {
   margin-bottom: 4px;
   color: var(--muted-text);
+}
+
+ .order{
+        text-align:center;
+        padding:120px 20px 140px;
+    }
+    .order h2{
+        margin-bottom:30px;
+    }
+    .social-links{
+        display:flex;
+        justify-content:center;
+        gap:30px;
+    }
+    .social-links a{
+        width:65px;
+        height:65px;
+        border-radius:50%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        transition:.3s;
+    }
+    .social-links img{
+        width:34px;
+        height:34px;
+    }
+    .instagram{
+       background:linear-gradient (45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+    }
+    .instagram:hover{transform:scale(1.1);}
+    .snapchat{
+        background:#FFFC00;
+    }
+    .snapchat:hover{transform:scale(1.1);}
+
+
+
+    .header-social {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.header-social span img {
+    width: 18px;
+    height: 18px;
+    display: block;
+    transition: 0.2s ease;
+    /* background: white;
+    color: var(--primary-blue); */
+}
+
+.header-social span img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -629,5 +709,211 @@ header {
   .request-section,
   .footer-strip {
     padding-inline: 20px;
+  }
+}
+
+
+
+
+
+@media (max-width: 600px) {
+  /* all your mobile fixes go here */
+}
+
+/* -------------------------------------------------------
+   RESPONSIVE — TABLET (<= 960px)
+-------------------------------------------------------- */
+@media (max-width: 960px) {
+
+  /* HEADER */
+  header {
+    padding: 14px 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .header-left span {
+    font-size: 16px;
+  }
+
+  .header-right {
+    font-size: 13px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* HERO */
+  .hero-card {
+    flex-direction: column;
+    height: auto;
+    padding: 32px 24px;
+    gap: 30px;
+  }
+
+  .hero-left {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-right {
+    width: 100%;
+    height: 380px;
+  }
+
+  .hero-image-frame img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* SERVICES STRIP */
+  .services-strip {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    gap: 10px;
+  }
+
+  /* ABOUT */
+  .about-text > p {
+    max-width: 90%;
+    font-size: 15px;
+  }
+
+  /* REVIEWS */
+  .reviews-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  /* FOOTER */
+  .footer-strip {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* -------------------------------------------------------
+   RESPONSIVE — MOBILE (<= 600px)
+-------------------------------------------------------- */
+@media (max-width: 600px) {
+
+  /* HEADER */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 18px;
+    gap: 14px;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .schedule-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  /* PAGE WRAP */
+  .page-wrap {
+    padding: 0 14px;
+    margin-top: 20px;
+  }
+
+  /* HERO */
+  .hero-card {
+    flex-direction: column;
+    height: auto;
+    padding: 24px 14px 34px;
+    gap: 24px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtext {
+    font-size: 14px;
+  }
+
+  .hero-list {
+    font-size: 15px;
+  }
+
+  .hero-right {
+    height: 300px;
+  }
+
+  .hero-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* SERVICES STRIP */
+  .services-strip {
+    margin-top: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 18px;
+    gap: 10px;
+  }
+
+  .services-strip-item {
+    padding: 14px 10px;
+  }
+
+  /* ABOUT */
+  .about-title {
+    font-size: 22px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  /* REVIEWS */
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* WIZARD */
+  .wizard-container {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .wizard-title {
+    font-size: 20px;
+  }
+
+  .wizard-option {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .wizard-result-text {
+    font-size: 15px;
+  }
+
+  /* FOOTER */
+  .footer-strip {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .footer-badge {
+    width: 46px;
+    height: 46px;
   }
 }
