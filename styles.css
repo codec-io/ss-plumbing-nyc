@@ -91,6 +91,7 @@ header {
   opacity: 0.95;
 }
 
+
 .schedule-btn {
   background: var(--accent-orange);
   border: none;
@@ -595,6 +596,62 @@ header {
   color: var(--muted-text);
 }
 
+ .order{
+        text-align:center;
+        padding:120px 20px 140px;
+    }
+    .order h2{
+        margin-bottom:30px;
+    }
+    .social-links{
+        display:flex;
+        justify-content:center;
+        gap:30px;
+    }
+    .social-links a{
+        width:65px;
+        height:65px;
+        border-radius:50%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        transition:.3s;
+    }
+    .social-links img{
+        width:34px;
+        height:34px;
+    }
+    .instagram{
+       background:linear-gradient (45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+    }
+    .instagram:hover{transform:scale(1.1);}
+    .snapchat{
+        background:#FFFC00;
+    }
+    .snapchat:hover{transform:scale(1.1);}
+
+
+
+    .header-social {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.header-social span img {
+    width: 18px;
+    height: 18px;
+    display: block;
+    transition: 0.2s ease;
+    /* background: white;
+    color: var(--primary-blue); */
+}
+
+.header-social span img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 960px) {
   .hero-card {
@@ -652,5 +709,211 @@ header {
   .request-section,
   .footer-strip {
     padding-inline: 20px;
+  }
+}
+
+
+
+
+
+@media (max-width: 600px) {
+  /* all your mobile fixes go here */
+}
+
+/* -------------------------------------------------------
+   RESPONSIVE — TABLET (<= 960px)
+-------------------------------------------------------- */
+@media (max-width: 960px) {
+
+  /* HEADER */
+  header {
+    padding: 14px 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .header-left span {
+    font-size: 16px;
+  }
+
+  .header-right {
+    font-size: 13px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* HERO */
+  .hero-card {
+    flex-direction: column;
+    height: auto;
+    padding: 32px 24px;
+    gap: 30px;
+  }
+
+  .hero-left {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-right {
+    width: 100%;
+    height: 380px;
+  }
+
+  .hero-image-frame img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* SERVICES STRIP */
+  .services-strip {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    gap: 10px;
+  }
+
+  /* ABOUT */
+  .about-text > p {
+    max-width: 90%;
+    font-size: 15px;
+  }
+
+  /* REVIEWS */
+  .reviews-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  /* FOOTER */
+  .footer-strip {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* -------------------------------------------------------
+   RESPONSIVE — MOBILE (<= 600px)
+-------------------------------------------------------- */
+@media (max-width: 600px) {
+
+  /* HEADER */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 18px;
+    gap: 14px;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .schedule-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  /* PAGE WRAP */
+  .page-wrap {
+    padding: 0 14px;
+    margin-top: 20px;
+  }
+
+  /* HERO */
+  .hero-card {
+    flex-direction: column;
+    height: auto;
+    padding: 24px 14px 34px;
+    gap: 24px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtext {
+    font-size: 14px;
+  }
+
+  .hero-list {
+    font-size: 15px;
+  }
+
+  .hero-right {
+    height: 300px;
+  }
+
+  .hero-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* SERVICES STRIP */
+  .services-strip {
+    margin-top: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 18px;
+    gap: 10px;
+  }
+
+  .services-strip-item {
+    padding: 14px 10px;
+  }
+
+  /* ABOUT */
+  .about-title {
+    font-size: 22px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  /* REVIEWS */
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* WIZARD */
+  .wizard-container {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .wizard-title {
+    font-size: 20px;
+  }
+
+  .wizard-option {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .wizard-result-text {
+    font-size: 15px;
+  }
+
+  /* FOOTER */
+  .footer-strip {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .footer-badge {
+    width: 46px;
+    height: 46px;
   }
 }
